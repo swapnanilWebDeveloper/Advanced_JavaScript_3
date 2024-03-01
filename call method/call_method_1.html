@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+       <script>
+             const youtuber1 = {
+                name : "Thapa Technical",
+                content : "programming",
+                feature : function(){
+                    console.log("very friendly way of teaching "+this.name+" is my fav "+this.content+" channel");
+                }
+             }
+
+             youtuber1.feature();
+
+             const youtuber2 = {
+                name : "Yahoo baba",
+                content : "Laravel"
+             }
+
+             youtuber1.feature.call(youtuber2);
+       </script>
+    </body>
+</html>

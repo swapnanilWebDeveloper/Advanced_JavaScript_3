@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         const student = {
+            name : "mayuk mukherjee",
+            email : "mayuk@gmail.com",
+            address : "barendranagar",
+            physics : 99,
+            chemistry : 88,
+            mathematics : 97
+         }
+         
+         let num = 0,total = 0;
+         for (const key in student) {
+             num = num + 1;
+             console.log(key+" is  : "+student[key]);
+            if(num > 3){
+                total = total + parseInt(student[key]);
+            }
+         }
+         console.log("The total marks is = "+total);
+
+    </script>
+</body>
+</html>

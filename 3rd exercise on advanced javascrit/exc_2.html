@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+           let post = "Senior Engineer";
+           let address = "BarendraNagar";
+           
+           const Employee = {
+              name : "Mayuk Mukherjee",
+              email : "Mayuk@gmail.com",
+              age : 25,
+              salary : 120000,
+              company : "Tata Consultancy Services",
+              experience : "4 years"
+           }
+
+           const change_property = (p, q, obj) => {
+              p = "Machine Level coder";
+              q = "salt lake sector 5 ";
+
+              console.log("posting = "+p+"  :  "+" address is : "+q);
+
+              obj.name = "swapnanil";
+              obj.email= "swapnanil876@gmail.com";
+              obj.age = 28;
+              obj.salary = "200000";
+              obj.company = "Infosys";
+              obj.experience = "10 years";
+           }
+
+           change_property(post, address, Employee);
+
+           console.log(post+" / "+address);
+           console.log(Employee.name);
+           console.log(Employee.email);
+           console.log(Employee.age);
+           console.log(Employee.salary);
+           console.log(Employee.company);
+           console.log(Employee.experience);
+
+    </script>
+</body>
+</html>

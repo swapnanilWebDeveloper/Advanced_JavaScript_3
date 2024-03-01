@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+          const student1 = {
+                name : "Mayuk Mukherjee",
+                email : "Mayuk@gmail.com",
+                address : "Barendranagar",
+                physics : 99,
+                chemistry : 88,
+                mathematics : 97
+          }
+
+          const student2 = {
+                name : "Suryendu Sarkar",
+                email : "Suryendu@gmail.com",
+                address : "Thanapara",
+                physics : 91,
+                chemistry : 78,
+                mathematics : 83
+          }
+
+          const student3 = {
+                name : "Sanlap Gadai",
+                email : "Sanlap@gmail.com",
+                address : "Rail-gate",
+                physics : 85,
+                chemistry : 81,
+                mathematics : 67
+          }
+
+          function calc_total(bengali, history, geography){
+                 var science, arts, total;
+                 science = this.physics + this.chemistry + this.mathematics;
+                 arts = bengali + history + geography;
+                 total = science + arts;
+                 console.log("marks in physics : "+this.physics+" chemistry = "+this.chemistry+" mathematics = "+this.mathematics);
+                 console.log("Total marks in science = "+science);
+                 console.log("marks in bengali : "+bengali+" history = "+history+" geography = "+geography);
+                 console.log("Total marks in arts = "+arts);
+                 console.log("total marks in all subjects = "+total);
+          }
+
+          function personal_details(){
+            console.log(" name is : "+this.name+" email address : "+this.email+" address : "+this.address);
+          }
+
+          let obj1 = calc_total.bind(student1);
+          obj1(64,59,76);
+
+          obj1 = personal_details.bind(student1);
+          obj1();
+
+          let obj2 = calc_total.bind(student2);
+          obj2(55,82,65);
+
+          obj2 = personal_details.bind(student2);
+          obj2();
+
+          let obj3 = calc_total.bind(student3);
+          obj3(75,89,95);
+
+          obj3 = personal_details.bind(student3);
+          obj3();
+     </script>
+</body>
+</html>

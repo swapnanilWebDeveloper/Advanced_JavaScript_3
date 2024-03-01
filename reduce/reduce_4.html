@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          const employee = [
+              {
+                name : "Mayuk Mukherjee",
+                basic : 25000,
+                HRA : 3500,
+                transport_allowance : 5600
+              },
+              {
+                name : "Suryendu Sarkar",
+                basic : 35000,
+                HRA : 6500,
+                transport_allowance : 3300
+              },
+              {
+                name : "Aninda Mukherjee",
+                basic : 12000,
+                HRA : 4500,
+                transport_allowance : 7700
+              },
+              {
+                name : "Swapnanil Roy",
+                basic : 65000,
+                HRA : 7500,
+                transport_allowance : 2800
+              },
+          ];
+
+          const HRA_total = employee.reduce((acc, emp) => acc + emp.HRA, 0);
+
+          console.log(HRA_total );
+
+          const basic_total = employee.reduce((acc, emp) => acc + emp.basic, 0);
+
+          console.log(basic_total);
+
+          const transport_total = employee.reduce((acc, emp) => acc + emp.transport_allowance, 0);
+
+          console.log(transport_total);
+    </script>
+</body>
+</html>

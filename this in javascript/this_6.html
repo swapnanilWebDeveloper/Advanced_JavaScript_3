@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const cube = {
+            length : 10,
+            breadth : 8,
+            height : 4,
+            calc_volume : function(length, breadth, height){
+                let vol1,vol2;
+                vol1 = length * breadth * height;
+                console.log("volume of first cube is = "+vol1);
+
+                vol2 = this.length * this.breadth * this.height;
+                console.log("Volume of second cube is = "+vol2)
+            }
+        }
+ 
+        cube.calc_volume(12,5,3);
+    </script>
+</body>
+</html>

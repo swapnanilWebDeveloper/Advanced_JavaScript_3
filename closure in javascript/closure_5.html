@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const calc_total = (name ,post, experience) => {
+            var basic,HRA, transport_allowance;
+                basic = 30000;
+                transport_allowance = 2500;
+                HRA = 5000;
+            const salary = (provident_fund, income_tax) => {
+                         var net_salary;
+                         net_salary = basic + HRA + transport_allowance - provident_fund - income_tax;
+                         console.log("salary of : "+name+" is = "+net_salary);
+                         console.log(name+" is working as a"+post+" with an experienxe of : "+experience);
+                 } 
+                
+            return salary;
+        }
+        
+        const emp1 = calc_total("swapnanil","javascript developer", "5 years");
+        emp1(2500, 3500);
+
+        const emp2 = calc_total("suryendu","react developer", "15 years");
+        emp2(1000, 1300);
+
+        const emp3 = calc_total("swapnanil","java developer", "9 years");
+        emp3(4500, 5000);
+    </script>
+</body>
+</html>

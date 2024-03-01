@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function subjects(physics, chemistry, mathematics){
+                 var total,avg;
+                    total = physics + chemistry + mathematics;
+
+                    return  function results(){
+                         avg = total / 3;
+                         console.log("total marks is = "+total+" average is = "+avg);
+                    }
+        }
+
+      //  var sub = subjects(99,88,97);
+      //  sub();
+
+      subjects(90,82,92)();
+    </script>
+</body>
+</html>

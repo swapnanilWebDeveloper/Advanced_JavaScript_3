@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // here interviewQuestions is a function that returns a function , that's why interviewQuestions() function is a 
+      // higher order function.
+           const interviewQuestions = (name) =>{
+               if(name == "vinod"){
+                  return function(topic){
+                    console.log("hii "+name+" , what is "+topic+" plz explain us");
+                  } 
+               }
+               if(name == "thapa"){
+                  return function(topic){
+                    console.log("hii "+name+" , what is "+topic+" plz explain us");
+                  } 
+               }
+               if(name == "thapatechnical"){
+                  return function(topic){
+                    console.log("hii "+name+" , what is "+topic+" plz explain us");
+                  } 
+               }
+               else{
+                return function(){
+                    console.log("Welcome to interview!!!");
+                }
+               }
+           }
+
+          const cand1 = interviewQuestions("vinod");
+          cand1("UI");
+          cand1("UX");
+          cand1("Graphics Design");
+          cand1("Animation");
+
+          const cand2 = interviewQuestions("thapa");
+          cand2("web developer");
+          cand2("java developer");
+          cand2("nodejs developer");
+          cand2("react developer");
+
+          const cand3 = interviewQuestions("thapatechnical");
+          cand3("Frontend developer");
+          cand3("backend developer");
+          cand3("CPP developer");
+          cand3("Operating System Design");
+
+          const cand4 = interviewQuestions("swapnail");
+          cand4();
+    </script>
+</body>
+</html>

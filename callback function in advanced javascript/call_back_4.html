@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var talk = function(fx){
+        console.log("I am talking right now");
+           fx();
+       }
+
+       var sayHi = function(){
+        console.log("say hi to everyone");
+       }
+
+       talk(sayHi);
+    </script>
+</body>
+</html>

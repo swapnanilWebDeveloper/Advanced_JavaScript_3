@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           const interviewQuestions = (name) =>{
+               if(name == "vinod"){
+                  return function(topic){
+                    console.log("hii "+name+" , what is "+topic+" plz explain us");
+                  } 
+               }
+               if(name == "thapa"){
+                  return function(topic){
+                    console.log("hii "+name+" , what is "+topic+" plz explain us");
+                  } 
+               }
+               if(name == "thapatechnical"){
+                  return function(topic){
+                    console.log("hii "+name+" , what is "+topic+" plz explain us");
+                  } 
+               }
+               else{
+                return function(){
+                    console.log("Welcome to interview!!!");
+                }
+               }
+           }
+
+           interviewQuestions("vinod")("UI");
+           interviewQuestions("thapa")("Full stack developer");
+           interviewQuestions("thapatechnical")("Frontend developer");
+           interviewQuestions("swapnanil")();
+    </script>
+</body>
+</html>

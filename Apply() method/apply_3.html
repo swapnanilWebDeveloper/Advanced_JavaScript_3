@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           employee1 = {
+               name : "Mayuk Mukherjee",
+               email : "Mayuk@gmail.com",
+               address: "Barendranagar",
+               college : "IIEST",
+               company : "TCS",
+               basic : 35000,
+               HRA : 5000,
+               transport_allowance : 3500,
+               calc_salary : function(provident_fund,income_tax){
+                        var total_salary;
+                        total_salary = this.basic+ this.HRA + this.transport_allowance -provident_fund - income_tax;
+                        console.log("total salary = "+total_salary);
+               }
+           } 
+
+           employee2 = {
+               name : "Suryendu Sarkar",
+               email : "Suryendu@gmail.com",
+               address: "Thanapara",
+               college : "jadavpur university",
+               company : "wipro",
+               basic : 45000,
+               HRA : 15000,
+               transport_allowance : 6500,
+               identity_profile : function(){
+                  console.log("name : "+this.name+" email : "+this.email+" adress : "+this.address+" college : "+this.college);
+                  console.log("company is :"+this.company);
+               }
+           }
+
+           employee1.calc_salary.apply(employee2,[2500,3500]);
+           employee2.identity_profile.apply(employee1);
+    </script>
+</body>
+</html>

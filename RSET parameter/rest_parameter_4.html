@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+           function sum_arr(name, age, ...element){
+               let min = element[0];
+               for(let  i = 1; i < element.length; i++){
+                     if(element[i] < min){
+                        min = element[i];
+                     }
+               }
+               console.log("length of the array is = "+element.length);
+               console.log("The smallest element is = "+min);
+               console.log("name is : "+name+", age is = "+age);
+           }
+
+           sum_arr("swapnanil",25,7,10,14,4,6,8,9);
+     </script>
+</body>
+</html>

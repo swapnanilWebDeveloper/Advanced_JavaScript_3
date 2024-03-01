@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        cricketer1 = {
+            name : "Swapnanil Roy",
+            email : "Swapnanil@gmail.com",
+            age : 35,
+            odi_matches : 300, 
+            test_matches : 194,
+            odi_centuries : 259,
+            test_centuries : 188,
+
+            career : function(odi_runs, test_runs){
+                    var total_runs, total_matches, odi_avg, test_avg;
+                    
+                    total_runs = odi_runs + test_runs;
+                    total_matches = this.odi_matches + this.test_matches;
+                    odi_avg = odi_runs / this.odi_matches;
+                    test_avg = test_runs / this.test_matches;
+                console.log("Total runs in ODI = "+odi_runs+" in "+this.odi_matches+" odi matches");
+                console.log("Total runs in test = "+test_runs+" in "+this.test_matches+" test matches");
+                console.log("Average runs in ODI = "+odi_avg);
+                console.log("Average runs in test = "+test_avg);
+
+            }
+        }
+
+
+        cricketer2 = {
+            name : "virat Kohli",
+            email : "virat@gmail.com",
+            age : 32,
+            odi_matches : 230, 
+            test_matches : 147,
+            odi_centuries : 49,
+            test_centuries : 28,
+
+            fan_following : function(instagram, facebook, twitter){
+                    var total_following;
+                    total_following = instagram + facebook + twitter;
+                    console.log("total following on social media = "+total_following+" MN ");
+                    console.log("following in facebook : "+facebook+" instagram : "+instagram+" twitter : "+twitter);
+            }
+        }
+
+        cricketer1.career.call(cricketer2,74000,53000);
+
+        cricketer2.fan_following.call(cricketer1,188,124,249);
+    </script>
+</body>
+</html>

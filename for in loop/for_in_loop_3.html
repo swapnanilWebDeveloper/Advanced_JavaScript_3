@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const map = new Map();
+
+        map.set("IN", "India");
+        map.set("USA", "United States of America");
+        map.set("Fr", "France");
+
+        for (const key in map) {
+            console.log(key);
+        }
+
+        // map is not iteratable .... that's why it can't be accessed by for-in loop
+    </script>
+</body>
+
+</html>

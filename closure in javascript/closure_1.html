@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const outerFun = (a) => {
+            let b = 10;
+            const innerFun = () => {
+                let sum = a + b;
+                console.log("The sum of two no. is = "+sum);
+            }
+            innerFun();
+        }
+        outerFun(5);
+    </script>
+</body>
+</html>

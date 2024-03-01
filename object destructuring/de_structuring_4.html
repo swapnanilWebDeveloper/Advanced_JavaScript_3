@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+          const Employee = {
+                name : "MAyuk Mukherjee",
+                email : "Mayuk@gmail.com",
+                address: "Barendranagar",
+                profession : {
+                       company : "TCS",
+                       experience : "4 years",
+                       post : "researcher"
+                },
+                basic : 75000,
+                HRA : 4500,
+                transport_allowance : 3500,
+                provident_fund : 6500,
+                income_tax : 8500
+          }
+
+          let {name,email,address :add, profession : pro, basic : b, HRA : h, 
+                transport_allowance : ta, provident_fund : pf, income_tax : it } = Employee;
+
+          console.log("name is : "+name+" email is : "+email+" address is : "+add);
+          console.log("company is : "+pro.company+" experience of : "+pro.experience+" post is : "+pro.post);
+          console.log("basic = "+b+" HRA = "+h+" tarnsport allowance = "+ta+" provident fund = "+pf+" income tax = "+it);
+
+          let net_salary;
+          net_salary = b + h + ta - pf - it;
+          console.log("net salry is = "+net_salary);
+     </script>
+</body>
+</html>

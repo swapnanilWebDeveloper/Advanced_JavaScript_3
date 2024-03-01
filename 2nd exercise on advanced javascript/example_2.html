@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = {
+            name : "Mayuk Mukherjee",
+            age : 19,
+            school : "Palchoudhury H.S School",
+            email : "Mayuk@gmail.com",
+            phy: 99,
+            chem : 88,
+            math : 97,
+            calc_total : function(){
+                var total;
+                total  = this.phy + this.chem + this.math;
+                console.log("Total marks is = "+total);
+                console.log("Marks in physics : "+this.phy+", chemistry : "+this.chem+" , mathematics : "+this.math);
+                console.log(this);
+
+                perc();
+
+                function perc(){
+                    var per ,name ="swapnanil roy";
+                    per = (this.phy+this.chem + this.math) / 3 ;
+                    console.log("percentage is = "+per);
+                    console.log(this);
+                    console.log("this is done by "+name);
+                }
+            }
+        }
+        student.calc_total();
+    </script>
+</body>
+</html>

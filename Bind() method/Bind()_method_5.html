@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employee1 = {
+            name : "Mayuk Mukherjee",
+            email : "Mayuk@gamil.com",
+            address : "Barendranagar",
+            company : "TCS",
+            basic : 35000,
+            HRA : 5500,
+            transport_allowance : 3500
+        }
+
+        const employee2 = {
+            name : "Suryendu Sarkar",
+            email : "Suryendu@gamil.com",
+            address : "Thanapara",
+            company : "Infosys",
+            basic : 55000,
+            HRA : 4800,
+            transport_allowance : 6800
+        }
+
+        const employee3 = {
+            name : "Swapnanil Roy",
+            email : "Swapnanil@gamil.com",
+            address : "ChotoBazar",
+            company : "Wipro",
+            basic : 125000,
+            HRA : 7300,
+            transport_allowance : 5500
+        }
+
+        function calc_salary(provident_fund, income_tax){
+                 var net_salary;
+                 net_salary = this.basic + this.HRA + this.transport_allowance - provident_fund - income_tax;
+                 console.log("salary is = "+net_salary);
+                 console.log("basic : "+this.basic+" HRA :"+this.HRA+" transport : "+this.transport_allowance);
+                 console.log("income tax = "+income_tax+" provident fund = "+provident_fund);
+        } 
+
+        function bio_def(){
+            console.log("name is : "+this.name+" email address : "+this.email+" address is : "+this.address);
+            console.log("The company is = "+this.company);
+        }
+
+        let emp1 = calc_salary.bind(employee1);
+        emp1(3500,6500);
+
+        emp1 = bio_def.bind(employee1);
+        emp1();
+
+        let emp2 = calc_salary.bind(employee2);
+        emp2(6600,7500);
+
+        emp2 = bio_def.bind(employee2);
+        emp2();
+
+        let emp3 = calc_salary.bind(employee3);
+        emp3(4600,3800);
+
+        emp3 = bio_def.bind(employee3);
+        emp3();
+    </script>
+</body>
+</html>

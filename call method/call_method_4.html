@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        student1 = {
+            name : "mayuk mukherjee",
+            email : "mayuk@gmail.com",
+            address : "Barendranagar",
+            age : 19,
+            physics : 99,
+            chemistry : 88,
+            mathematics : 97,
+            biology: 90,
+            calc_total : function(history, geography, bengali, english){
+                        var arts_total, science_total, total;
+                        arts_total = history + geography + bengali + english;
+                        science_total = this.physics + this.chemistry + this.mathematics;
+                        total = arts_total + science_total;
+                        console.log("Total marks in arts = "+arts_total);
+                        console.log("Total marks in science = "+science_total);
+                        console.log("marks in physics : "+this.physics+" chemistry : "+this.chemistry+" mathematics "+this.mathematics);
+                        console.log("marks in history="+history+" geography ="+geography+" bengali="+bengali+" english="+english);
+            }
+        }
+
+        student2 = {
+            name : "Suryendu Sarkar",
+            email : "Suryendu@gmail.com",
+            address : "Thanapara",
+            age : 19,
+            physics : 91,
+            chemistry : 82,
+            mathematics : 84,
+            biology: 97,
+            bio_personal : function(career,college){
+                    console.log("name is : "+this.name+" email_address : "+this.email+" adrress : "+this.address);
+                    console.log(" dream college is : "+college+" carrer chosen : "+career);
+            }
+        }
+
+        student1.calc_total.call(student2,78,82,67,88);
+        student2.bio_personal.call(student1,"B.Tech CSE","IIEST");
+    </script>
+</body>
+</html>

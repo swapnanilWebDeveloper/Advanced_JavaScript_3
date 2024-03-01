@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student ={
+            name : "Mayuk Mukherjee",
+            roll : 1,
+            age : 21,
+            email : "mayuk@gmail.com", 
+            physics: 98,
+            chemistry : 88,
+            mathematics : 97,
+
+            calc_total : function(){
+                console.log("name ="+this.name+", email : "+this.email+", age = "+this.age);
+                console.log("marks in --> physics = "+this.physics+", chemistry = "+this.chemistry+" , maths = "+this.mathematics);
+
+                let total;
+                total = this.physics+this.chemistry+this.mathematics;
+                console.log("Total marks is = "+total);
+            }
+        }
+
+        student.calc_total();
+    </script>
+</body>
+</html>

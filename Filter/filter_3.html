@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const books = [
+            {title : "Book1", genre : "Fiction" , published : 1982, edition : 2004},
+            {title : "Book2", genre : "history" , published : 1999, edition : 2014},
+            {title : "Book3", genre : "science" , published : 1987, edition : 2006},
+            {title : "Book4", genre : "politics" , published : 1942, edition : 2009},
+            {title : "Book5", genre : "murder" , published : 1988, edition : 2012},
+            {title : "Book6", genre : "history" , published : 1782, edition : 2011},
+            {title : "Book7", genre : "ghost" , published : 1954, edition : 2018},
+            {title : "Book8", genre : "history" , published : 1942, edition : 2004},
+         ];
+
+         const userBooks = books.filter( (bk) => bk.genre === 'history');
+
+         console.log(userBooks);
+
+         const userBooks1 = books.filter( (bk) => { return bk.published >= 1980 });
+
+         console.log(userBooks1);
+
+         const userBooks2 = books.filter( (bk) => { return bk.published >= 1980 && bk.genre == "history" });
+
+         console.log(userBooks2);
+    </script>
+</body>
+</html>

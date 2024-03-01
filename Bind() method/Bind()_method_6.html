@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const youtuber1 = {
+                name : "thapatechnical",
+                content : "programming",
+                feature : function(rating){
+                    console.log("My fav youtuber is = "+this.name+" he made videos on "+this.content);
+                    console.log("I will give "+rating+" stars");
+                }
+            }
+            
+            const youtuber2 = {
+                name : "Yahoo Baba",
+                content : "React.js" 
+            }
+
+            const youtuber3 = {
+                name : "chai aur code",
+                content : "MERN stack"   
+            }
+
+            let you_Fun1 = youtuber1.feature.bind(youtuber2);
+            you_Fun1(4.8);
+
+            let you_Fun2 = youtuber1.feature.bind(youtuber3);
+            you_Fun2(3.6);
+
+
+    </script>
+</body>
+</html>

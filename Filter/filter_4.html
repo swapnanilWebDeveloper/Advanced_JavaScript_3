@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const myNums = [1,2,153,4,370,6,7,371,9,10];
+
+         let newnums = myNums.filter( (num) => 
+          {
+            var N = num;
+            var dig, sum = 0;
+
+            while(N > 0){
+                dig = parseInt(N % 10);
+                sum = sum + dig * dig * dig ;
+                N = parseInt(N / 10);
+            }
+            if( sum == num){
+                return num;
+            }
+          })
+        console.log(newnums);
+
+       
+    </script>
+</body>
+</html>

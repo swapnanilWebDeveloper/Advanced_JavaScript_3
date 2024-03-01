@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+            const youtuber = {
+                name : "thapatechnical",
+                content : "programming",
+            }
+
+            const youtuber1 = {
+                name : "thapatechnical1",
+                content : "programming1",
+            }
+
+            const youtuber2 = {
+                name : "thapatechnical2",
+                content : "programming2",
+            }
+
+            function feature(rating){
+                    console.log("My fav youtuber is = "+this.name+" he made videos on "+this.content);
+                    console.log("I will give "+rating+" star");
+                }
+
+            let you1 = feature.bind(youtuber);
+            you1(5);
+
+            let you2 = feature.bind(youtuber1);
+            you2(3.4);
+
+            let you3 = feature.bind(youtuber2);
+            you3(4.2);
+      </script>
+</body>
+</html>

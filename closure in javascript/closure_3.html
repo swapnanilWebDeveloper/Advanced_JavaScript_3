@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const interviewQuestions = (name) =>{
+
+            const first_question =  (topic) => {
+                if(name == "vinod"){
+                    console.log("Hi, "+name+" what is "+topic+" explain us");
+                
+                 }
+                 else if(name == "thapa"){
+                         console.log("Hi, "+name+" what is "+topic+" explain us");
+                 }
+                 else if(name == "thapatechnical"){
+                         console.log("Hi, "+name+" what is "+topic+" explain us");
+                 }
+                 else {       
+                        console.log("welcome to interview");
+                }
+            }
+
+            return first_question;
+        }
+
+        const candidate1 = interviewQuestions("vinod");
+        candidate1("java");
+
+        const candidate2 = interviewQuestions("thapa");
+        candidate2("React.js");
+
+        const candidate3 = interviewQuestions("thapatechnical");
+        candidate3("node.js");
+
+        const candidate4 = interviewQuestions("swapnanil");
+        candidate4();
+    </script>
+</body>
+</html>

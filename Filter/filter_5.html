@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const myNums = [3,43,5,67,7,8,93,10,66,47];
+
+         let newnums = myNums.filter( (num) => {
+                       var n = num,i;
+                       for( i = 2; i < n; i++ ){
+                          if(n % i == 0){
+                            break;
+                          }
+                       }
+                       if(i==n){
+                        return n;
+                       }
+         })
+        console.log(newnums);
+
+    </script>
+</body>
+</html>

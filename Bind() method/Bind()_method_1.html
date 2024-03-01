@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const youtuber = {
+                name : "thapatechnical",
+                content : "programming",
+                feature : function(){
+                    console.log("My fav youtuber is = "+this.name+" he made videos on "+this.content);
+                }
+            }
+            youtuber.feature();
+
+            let youtuberFun = youtuber.feature.bind(youtuber);
+            youtuberFun();
+    </script>
+</body>
+</html>

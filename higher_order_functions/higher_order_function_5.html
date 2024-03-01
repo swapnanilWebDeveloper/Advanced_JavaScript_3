@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const add = (a, b) => {
+            return a + b;
+        }
+        
+        const subs = (a, b) => {
+            return Math.abs(a - b);
+        }
+        
+        const mult = (a, b) => {
+            return Math.abs(a * b);
+        }
+        
+        const div = (a, b) => {
+            return Math.abs(a / b);
+        }
+        
+        const calculator = (num1 , num2, operator) => {
+            console.log("result is = "+operator(num1,num2));
+        }
+
+        calculator(8,2,add);
+        calculator(8,2,subs);
+        calculator(8,2,mult);
+        calculator(8,2,div);
+    </script>
+</body>
+
+</html>

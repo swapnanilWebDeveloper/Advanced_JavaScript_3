@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const bioData = {
+            name : "vinod",
+            age : 26,
+            degree : 'MCS',
+            hobbies : {
+                first : 'playing',
+                second : 'youtube videos'
+            }
+         }
+
+         console.log("my name is : "+bioData.name);
+
+         let {name : myName , age, degree : deg, hobbies : hob } = bioData;
+
+         console.log("my name is "+myName+" my age is "+age+" my degree is : "+deg);
+         console.log("I love making "+hob.second);
+    </script>
+</body>
+</html>

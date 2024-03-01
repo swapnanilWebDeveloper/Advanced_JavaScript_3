@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // here interviewQuestions is a function that returns a function , that's why interviewQuestions() function is a 
+      // higher order function.
+
+           const softwareCompany = (name ,post, experience) => {
+                 var basic,HRA, transport_allowance;
+                 basic = 30000;
+                 transport_allowance = 2500;
+                 HRA = 5000;
+
+                 return function salary(provident_fund, income_tax){
+                         var net_salary;
+                         net_salary = basic + HRA + transport_allowance - provident_fund - income_tax;
+                         console.log("salary of : "+name+" is = "+net_salary);
+                         console.log(name+" is working as a"+post+" with an experienxe of : "+experience);
+                 }
+           }
+ 
+           const emp1 = softwareCompany("swapnanil","javascript developer", "5 years");
+           emp1(2500, 3500);
+    </script>
+</body>
+</html>

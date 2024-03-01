@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+           function sum_arr(name, age, ...element){
+               let sum = 0;
+               for(let  i = 0; i < element.length; i++){
+                    sum = sum + element[i];
+               }
+               console.log("length of the array is = "+element.length);
+               console.log("sumation is = "+sum);
+               console.log("name is : "+name+", age is = "+age);
+           }
+
+           sum_arr("swapnanil",25,5,10,4,6,8,9);
+     </script>
+</body>
+</html>

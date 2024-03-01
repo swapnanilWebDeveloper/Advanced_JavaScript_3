@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = {
+            name : "mayuk",
+            email : "mayuk@gamil.com",
+            age : 21,
+            address : "barendranagar",
+            phy: 99,
+            chem : 88,
+            math : 97,
+            beng : 91,
+            eng : 95,
+            geo : 88
+        }
+
+        const stu_obj = student;
+
+        stu_obj.name = "suryendu";
+        stu_obj.email = "suryendu@gamil";
+
+        student.age = 25;
+        student.address = "ranaghat";
+
+        stu_obj.science_total = stu_obj.phy + stu_obj.chem + stu_obj.math;
+
+        student.calc_arts = function(){
+            var total = stu_obj.beng + stu_obj.eng + stu_obj.geo;
+            return total;
+        }
+         stu_obj.arts_total = stu_obj.calc_arts();
+
+        console.log("Total marks in science = "+stu_obj.science_total);
+        console.log("Total marks in arts = "+stu_obj.arts_total);
+
+        console.log(student);
+        console.log(stu_obj);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+       <script>
+             const youtuber1 = {
+                name : "Thapa Technical",
+                content : "programming",
+                feature : function(rating,support){
+                    console.log("very friendly way of teaching "+this.name+" is my fav "+this.content+" channel");
+                    console.log("I will give "+rating+" star");
+                    console.log("please "+support+" my channel");
+                }
+             }
+
+             // youtuber1.feature(5,"subscribe");
+
+             const youtuber2 = {
+                name : "six pack programmer",
+                content : "MERN stack programmer"
+             }
+
+             youtuber1.feature.apply(youtuber2,[3.5,"share"]);
+       </script>
+    </body>
+</html>

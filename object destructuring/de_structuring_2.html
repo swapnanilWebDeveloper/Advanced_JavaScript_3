@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+           const student = {
+                 name : "Mayuk",
+                 email : "Mayuk@gmail.com",
+                 address : "Barendranagar",
+                 physics : 99,
+                 chemistry : 88,
+                 mathematics : 97
+           }
+
+           let {name, email, address : add, physics : phy, chemistry : chem, mathematics : math } = student;
+           
+           console.log("name is : "+name+", email address : "+email+", address is : "+add);
+           console.log("marks in physics = "+phy+", chemistry = "+chem+", mathematics = "+math);
+
+           let total = phy + chem + math;
+           console.log("Total marks in science = "+total);
+      </script>
+</body>
+</html>

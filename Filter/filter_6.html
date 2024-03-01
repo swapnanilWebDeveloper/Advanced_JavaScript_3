@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const students = [
+            {name: "mayuk mukherjee", email : "Mayuk@gmail.com", physics: 99, chemistry : 88, mathematics: 97 },
+            {name: "Suryendu sarkar", email : "suryendu@gmail.com", physics: 91, chemistry : 78, mathematics: 87 },
+            {name: "Aninda mukherjee", email : "aninda@gmail.com", physics: 92, chemistry : 68, mathematics: 92 },
+            {name: "sanlap gadai", email : "sanlap@gmail.com", physics: 89, chemistry : 81, mathematics: 88 },
+            {name: "souvik modal", email : "souvik@gmail.com", physics: 83, chemistry : 73, mathematics: 63 },
+            {name: "anik ghosh", email : "anik@gmail.com", physics: 72, chemistry : 92, mathematics: 84 },
+            {name: "raj karmakar", email : "raj@gmail.com", physics: 66, chemistry : 85, mathematics: 78 },
+            {name: "souvik chatterjee", email : "souvik_1@gmail.com", physics: 88, chemistry : 68, mathematics: 97 },
+            {name: "swapnanil roy", email : "swapnanil@gmail.com", physics: 76, chemistry : 94, mathematics: 65 },
+            {name: "debjit debnath", email : "debjit@gmail.com", physics: 94, chemistry : 99, mathematics: 77 },
+            {name: "subha midhya", email : "subha@gmail.com", physics: 91, chemistry : 91, mathematics: 67 }
+         ];
+
+         const resultStudent = students.filter( (st) => st.physics >= 90);
+
+         console.log(resultStudent);
+
+         const resultStudent1 = students.filter( (st) => { return st.mathematics <= 80 });
+
+         console.log(resultStudent1);
+
+         const resultStudent2 = students.filter( (st) => { return st.chemistry >= 85 && st.physics >= 85 });
+
+         console.log(resultStudent2);
+
+         const resultStudent3 = students.filter( (st) => { 
+                                var total;
+                                total = st.physics + st.chemistry + st.mathematics;
+                                if( total >= 255){
+                                     return total;
+                                }
+                            });
+
+         console.log(resultStudent3);
+
+         const resultStudent4 = students.filter( (st) => { 
+                                var avg;
+                                avg = (st.physics + st.chemistry + st.mathematics) / 3;
+                                if( avg >= 88){
+                                     return avg;
+                                }
+                            });
+
+         console.log(resultStudent4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const career_direction = (name) => {
+                 
+            const college_chosen = (clg, course) => {
+                if(name == "suryendu"){
+                    console.log(name+"'s career is : "+course+" & college is : "+clg);
+                }
+                else if(name == "mayuk"){
+                    console.log(name+"'s career is : "+course+" & college is : "+clg);
+                }
+                else if(name == "aninda"){
+                    console.log(name+"'s career is : "+course+" & college is : "+clg);
+                }
+                else{
+                    console.log(name+"'s career is : "+course+" & college is : "+clg);
+                }
+            }
+
+            return college_chosen;
+        }
+        const cand1 = career_direction("suryendu");
+        cand1("Burduwan medical college","MBBS");
+
+        const cand2 = career_direction("mayuk");
+        cand2("IIEST","B.Tech CSE");
+
+        const cand3 = career_direction("aninda");
+        cand3("jadavpur","b.sc maths");
+
+        const cand4 = career_direction("swapnanil");
+        cand4("brainware","BCA");
+    </script>
+</body>
+</html>

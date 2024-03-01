@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        student1 = {
+            name : "swapnanil",
+            email :"swapnanil@gmail.com",
+            address: "chotobazar",
+            physics : 99,
+            chemistry : 88,
+            mathematics: 97,
+            calc_total : function(hist, geo, beng){
+                var arts_total, science_total, total;
+                science_total = this.physics + this.chemistry + this.mathematics;
+                arts_total = hist + geo + beng;
+                total = science_total + arts_total;
+                console.log("total marks in science = "+science_total);
+                console.log("Total amrks in arts = "+arts_total);
+                console.log("Total marks in all subject = "+total);
+            }
+        }
+
+        student2 = {
+            name : "mayuk mukherjee",
+            email :"mayuk@gmail.com",
+            address: "barendranagar",
+            physics : 79,
+            chemistry : 82,
+            mathematics: 67,
+            bio_profile : function(hobbie, fav_movie){
+                    console.log("name is : "+this.name+" email : "+this.email+" address : "+this.address);
+                    console.log("hobbie is : "+hobbie+" favourite movie is : "+fav_movie);
+            }
+        }
+
+        student2.bio_profile.apply(student1,["cycling","K3G"]);
+        student1.calc_total.apply(student2,[57,77,81]);
+    </script>
+</body>
+</html>
